@@ -3,7 +3,7 @@
 This project is a simulated frontend legal assistant interface, built for the Lexisg frontend intern assignment.
 
 ##  Features
-- ChatGPT-style chat interface
+-  chat interface
 - User can submit legal queries
 - AI-generated answer appears as a chat bubble
 - Citation link opens the PDF document in a new tab
@@ -17,8 +17,8 @@ This project is a simulated frontend legal assistant interface, built for the Le
 
 ## 🖥 How To Run Locally
 
-// download mygithub code and open terminal and in the terminal see your are in frontend folder is last end point
- example  like this..  D:\frontendtask> 
+// download my github zip code and extract the code  open open the extracted folder in vs code 
+
  and then
 
 
