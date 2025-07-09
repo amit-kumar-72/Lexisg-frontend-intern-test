@@ -1,12 +1,30 @@
-# React + Vite
+# Lexisg Frontend Intern Test (Frontend Assignment)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a simulated frontend legal assistant interface, built for the Lexisg frontend intern assignment.
 
-Currently, two official plugins are available:
+##  Features
+- ChatGPT-style chat interface
+- User can submit legal queries
+- AI-generated answer appears as a chat bubble
+- Citation link opens the PDF document in a new tab
+- Responsive and clean design with Tailwind CSS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  Technologies Used
+- React (Vite)
+- Tailwind CSS
+- HTML/CSS
+- JavaScript
 
-## Expanding the ESLint configuration
+## 🖥 How To Run Locally
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+// download mygithub code and open terminal and in the terminal see your are in frontend folder is last end point
+ example  like this..  D:\frontendtask> 
+ and then
+
+
+
+# Install dependencies by 
+npm install
+
+# Start the development server
+npm run dev
