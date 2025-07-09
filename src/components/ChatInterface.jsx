@@ -5,11 +5,8 @@ const ChatInterface = () => {
   const [query, setQuery] = useState('');
   const [chat, setChat] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [pdfOpen, setPdfOpen] = useState(false);
- const pdfLink = "https://lexisingapore-my.sharepoint.com/:b:/g/personal/harshit_lexi_sg/EdOegeiR_gdBvQxdyW4xE6oBCDgj5E4Bo5wjvhPHpqgIuQ?e=TEu4vz"
-  
-
-
+  const pdfLink =
+    'https://lexisingapore-my.sharepoint.com/:b:/g/personal/harshit_lexi_sg/EdOegeiR_gdBvQxdyW4xE6oBCDgj5E4Bo5wjvhPHpqgIuQ?e=TEu4vz';
 
   const handleSubmit = () => {
     if (!query.trim()) return;
@@ -45,37 +42,41 @@ const ChatInterface = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto flex flex-col gap-4 p-4">
-      <div className="flex flex-col gap-4">
-        {chat.map((msg, idx) => (
-          <ChatBubble key={idx} text={msg.text} sender={msg.sender}>
-            {msg.citationLink && (
-           <a
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 p-6">
+      <h1 className="text-3xl font-bold text-white mb-8">How can I help you?</h1>
+
+      <div className="w-full max-w-2xl bg-white rounded-lg shadow-lg p-6 flex flex-col gap-4">
+        <div className="flex flex-col gap-4">
+          {chat.map((msg, idx) => (
+            <ChatBubble key={idx} text={msg.text} sender={msg.sender}>
+              {msg.citationLink && (
+             <a
   href={pdfLink}
   target="_blank"
   rel="noopener noreferrer"
-  className="mt-2 px-4 py-2 bg-green-600 text-white rounded inline-block"
+  className="mt-2 px-5 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg shadow-md hover:scale-105 transition-transform duration-300 ease-in-out inline-block"
 >
-  View Source PDF -
+  View Source PDF
 </a>
-            )}
-          </ChatBubble>
-        ))}
-      </div>
+              )}
+            </ChatBubble>
+          ))}
+        </div>
 
-      <textarea
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        placeholder="Ask any thing"
-        className="w-full min-h-[100px] border rounded-lg p-3"
-      />
-      <button
-        onClick={handleSubmit}
-        disabled={loading}
-        className="bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 disabled:opacity-50"
-      >
-        {loading ? 'Loading...' : 'Submit'}
-      </button>
+        <textarea
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="Ask anything"
+          className="w-full min-h-[100px] border rounded-lg p-3"
+        />
+       <button
+  onClick={handleSubmit}
+  disabled={loading}
+  className="bg-gradient-to-r from-purple-600 to-pink-500 text-white px-6 py-3 rounded-lg shadow-md hover:scale-105 transition-transform duration-300 ease-in-out hover:shadow-lg disabled:opacity-50"
+>
+  {loading ? 'Loading...' : 'Submit'}
+</button>
+      </div>
     </div>
   );
 };
